@@ -1,0 +1,132 @@
+<script src="/login/status"></script>
+<script>
+    if (!isLogin) location.href = "login.html";
+</script>
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard &laquo; Admin</title>
+    <link rel="stylesheet" href="../assets/vendors/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="../assets/vendors/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="../assets/vendors/nprogress/nprogress.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+    <script src="../assets/vendors/nprogress/nprogress.js"></script>
+</head>
+
+<body>
+    <script>
+        NProgress.start();
+    </script>
+
+    <div class="main">
+        <nav class="navbar">
+            <button class="btn btn-default navbar-btn fa fa-bars"></button>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="password-reset.html"><i class="fa fa-user"></i>修改密码</a>
+                </li>
+                <li>
+                    <a href="javascript:;" id="logout"><i class="fa fa-sign-out"></i>退出</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container-fluid">
+                <div class="page-title">
+                        <h1>控制台</h1>
+                    </div>
+            <div class="jumbotron text-center">
+                <div class="cherts row">
+                    <div class="col-xs-6 col-md-3">
+                        <h2>用户总数</h2>
+                        <h6 id="counts"></h6>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <h2>普通用户总数</h2>
+                        <h6 id="puser"></h6>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <h2>管理员总数</h2>
+                        <h6 id="guser"></h6>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <h2>管理频道</h2>
+                        <h6 id="menus"></h6>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="containers">
+                    <div id="echarts1"></div>
+                    <div id="echarts2"></div>
+                </div>
+                </div>
+                <!-- <a><a class="btn btn-primary btn-lg" href="post-add.html" role="button">写文章</a></p> -->
+            </div>
+            <!-- <div class="row">
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">站点内容统计：</h3>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item" id="post"></li>
+                            <li class="list-group-item" id="category"></li>
+                            <li class="list-group-item" id="comment"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4"></div>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="aside">
+        <div class="profile">
+            <img class="avatar" src="../uploads/avatar.jpg" />
+            <h3 class="name">Coder</h3>
+        </div>
+        <ul class="nav">
+            <li class="active">
+                <a href="index.html"><i class="fa fa-dashboard"></i>控制台</a>
+            </li>
+            <li>
+                <a href="#menu-posts" class="collapsed" data-toggle="collapse">
+                    <i class="fa fa-thumb-tack"></i>内容管理<i class="fa fa-angle-right"></i>
+                </a>
+                <ul id="menu-posts" class="collapse">
+                    <li><a href="posts.html">发布中心</a></li>
+                    <li><a href="post-add.html">编辑管理</a></li>
+                    <li><a href="categories.html">频道管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="comments.html"><i class="fa fa-comments"></i>舆情管理</a>
+            </li>
+            <li>
+                <a href="users.html"><i class="fa fa-users"></i>用户管理</a>
+            </li>
+            <li>
+                <a href="#menu-settings" class="collapsed" data-toggle="collapse">
+                    <i class="fa fa-cogs"></i>系统设置<i class="fa fa-angle-right"></i>
+                </a>
+                <ul id="menu-settings" class="collapse">
+                    <li><a href="slides.html">宣传管理</a></li>
+                    <li><a href="settings.html">网站设置</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script src="../assets/vendors/jquery/jquery.js"></script>
+    <script src="../assets/vendors/bootstrap/js/bootstrap.js"></script>
+    <script src="https://zycftcenter.gdwlcloud.com:90/yangxian/screen/js/echarts.common.min.js"></script>
+    <script>
+        NProgress.done();
+    </script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/index.js"></script>
+</body>
+
+</html>
